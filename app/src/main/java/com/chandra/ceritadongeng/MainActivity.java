@@ -3,7 +3,7 @@ package com.chandra.ceritadongeng;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.view.View;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
@@ -23,6 +23,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -37,10 +42,26 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rvListDongeng;
         SearchView searchTanaman;
 
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
+
+                // Temukan ikon user
+                ImageView userIcon = findViewById(R.id.user);
+
+                // Tambahkan listener untuk klik pada ikon user
+                userIcon.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                // Membuka UserActivity ketika ikon diklik
+                                Intent intent = new Intent(MainActivity.this, ProfileActivity.class); // Ganti UserActivity dengan aktivitas yang sesuai
+                                startActivity(intent);
+                        }
+                });
+
 
                 //set transparent statusbar
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CeritaDongeng"
         tools:targetApi="31">
@@ -26,6 +26,7 @@
         <activity android:name=".MainAdapter" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".ModelMain" />
+        <activity android:name=".ProfileActivity" />
     </application>
 
 </manifest>

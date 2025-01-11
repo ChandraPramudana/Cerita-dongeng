@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_rounded"
+            android:paddingStart="10dp"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/nama_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="Cerita Dongeng" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/user"
+            android:elevation="16dp"
+            android:clipToOutline="true"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="admin " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/user" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:text="admin"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/gmail"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/gmail" />
+
+            <TextView
+                android:id="@+id/txtemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:text="Admin@gmail.com"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="150dp"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/Theme.MaterialComponents"
+            app:backgroundTint="@color/orange"
+            app:cornerRadius="50dp"
+            app:elevation="5dp"
+            app:rippleColor="@color/orange" />
+    </LinearLayout>
+</LinearLayout>
